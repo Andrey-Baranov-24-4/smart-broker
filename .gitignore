@@ -1,0 +1,47 @@
+# Environment & secrets
+.env
+*.env.local
+.deploy/
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Build artifacts
+build/
+dist/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs & temp
+*.log
+*.pid
+.DS_Store
+
+# Project-specific
+cloudflared.exe
+ngrok.exe
+cloudflare.log
+ngrok.log
+config.yml
+smart-broker-submission.zip
+smart-broker-frontend.zip
+make_previews.py
+start.bat
+bg_1920x1080.webp
+photo_2026-04-29_22-59-05.jpg
+
+# Claude Code settings
+.claude/
+
+# Preview images (generated)
+preview/
+
+# Markdown (временно)
+*.md

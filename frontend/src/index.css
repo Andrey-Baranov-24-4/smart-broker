@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  background: #0b1220;
+  color: #e6edf7;
+  /* Запрещаем браузеру самовольно перерасчитывать размер шрифта при
+     повороте/появлении системной клавиатуры (актуально для webview Салюта). */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Отключаем подсветку касаний и системные перекраски границ. */
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 100vw;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* На iOS-подобных webview шрифт <16px вызывает автоматический зум
+     при фокусе. Жёстко прибиваем минимум — это в том числе чинит
+     «масштаб не возвращается» на мобильном Салюте. */
+  font-size: 16px;
+}
+
+/* Убираем системные focus-обводки, которые в Sber-устройствах при выходе
+   из скринсейвера дают тонкую оранжевую/жёлтую рамку по краям приложения. */
+*:focus {
+  outline: none;
+}
+
+/* Но клавиатурный фокус для доступности оставляем — только на интерактивах. */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #3d7cff;
+  outline-offset: 2px;
+}
+
+html:focus,
+body:focus,
+#root:focus,
+div:focus,
+canvas:focus {
+  outline: none !important;
+  border-color: transparent !important;
+}
