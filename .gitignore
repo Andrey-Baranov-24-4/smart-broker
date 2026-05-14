@@ -43,5 +43,11 @@ photo_2026-04-29_22-59-05.jpg
 # Preview images (generated)
 preview/
 
-# Markdown (временно)
+# Markdown (временно, кроме корневого README)
 *.md
+!README.md
+
+# Иконки/превью SmartApp Studio (не нужны в репо)
+icon_240.png
+launcher_416x240.webp
+Пояснительная_записка_Smart_Broker.docx
